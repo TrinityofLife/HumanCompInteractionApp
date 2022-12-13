@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="photos/favicon-32x32.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Taco Order Form</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<main>
+  <header>
+    <span><a href="index.html">
+        <img alt="Sandwich" src="photos/sandwich-icon.png">
+      </a></span>
+<br>
+<div class ="googlecontainer">
+        <div id="google_translate_element"></div>
+        <script>
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+              {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+              'google_translate_element'
+            );
+          }
+        </script>
+
+        <script 
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+</div>
+     <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
+    <script src=theme.js></script>
+    
+    <nav>
+      <ul class="nav-list">
+        <li><a href="order.html">Order</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+
+    <br>
+
+    <div class="container">
+      <div class="formcontainer">
+        <label for="Shell">Shell</label>
+        <Select name="Shell-Type">
+          <Option value="Corn">Corn Tortilla</Option>
+          <Option value="Flour">Flour Tortilla</Option>
+          <Option value="Nopal">Nopal Tortilla</Option>
+          <Option value="Beetroot">Beetroot Tortilla</Option>
+          <Option value="Blue_Corn">Blue corn Tortilla</Option>
+          <Option value="None">No Tortilla</Option>
+        </Select>
+      </div>
+
+      <br>
+
+      <div class="container">
+        <div class="formcontainer">
+          <label for="Shell_consistency">Tortilla type</label>
+          <Select name="Shell-consistency">
+            <Option value="Hard">Hard Tortilla</Option>
+            <Option value="Soft">Soft Tortilla</Option>
+            < </Select>
+        </div>
+
+        <br>
+
+        <div class="formcontainer">
+          <label for="meat"> Meat:</label>
+          <Select required name="Meat-Type">
+            <Option value="beef">Beef</Option>
+            <Option value="sausage">Sausage</Option>
+            <Option value="chorizo">Chorizo</Option>
+            <Option value="vegan">Vegan</Option>
+            <Option value="No_Meat">No Meat</Option>
+          </Select>
+        </div>
+
+        <br>
+
+        <div class="image">
+          <img src="photos/Cheese-Taco2.jpg" class="foodImages" alt="Cheese Taco">
+        </div>
+        <div class="formcontainer">
+          <p>Cheese: (Choose any number of options.)</p>
+          <input type="checkbox" id="cheese" name="Cheddar" value="Cheddar"> <label for="Cheddar"> Cheddar
+          </label><br>
+
+          <input type="checkbox" id="Cheese" name="Swiss" value="Swiss"> <label for="Swiss"> Swiss </label><br>
+
+          <input type="checkbox" id="Cheese" name="Provolone" value="Provolone"> <label for="Provolone">
+            Provolone
+          </label><br>
+
+          <input type="checkbox" id="Cheese" name="Pepperjack" value="Pepperjack"> <label for="Pepperjack">
+            Pepperjack
+          </label><br>
+
+          <input type="checkbox" id="Cheese" name="Mozzarella" value="Mozzarella"> <label for="Mozzarella">
+            Mozzarella
+          </label><br>
+        </div>
+
+        <br>
+
+        <div class="image">
+          <img src="photos/Toppings-Taco2.jpg" class="foodImages" alt="Toppings">
+        </div>
+        <div class="formcontainer">
+          <p>Extras (Optional):</p>
+          <input type="checkbox" id="topping" name="colesaw" value="colesaw"> <label for="Tomato"> Tomato </label><br>
+          <input type="checkbox" id="topping" name="relish" value="relish"> <label for="Guacamole"> Guacamole
+          </label><br>
+          <input type="checkbox" id="topping" name="ketchup" value="ketchup"> <label for="Queso"> Queso </label><br>
+          <input type="checkbox" id="topping" name="mustard" value="mustard"> <label for="Beans"> Beans </label><br>
+          <input type="checkbox" id="topping" name="chili" value="chili"> <label for="Rice"> Rice </label><br>
+          <input type="checkbox" id="topping" name="bacon" value="bacon"> <label for="Jalapenos"> Jalapeños </label><br>
+        </div>
+
+        <br>
+
+        <div>
+
+          <label for="Special">Special Request</label>
+          <textarea name="Special"></textarea>
+        </div>
+
+        <br>
+        <button onclick="ConfirmOrder()" value="Submit"> Click here when finished!</button>
+
+        <script>
+          function ConfirmOrder() {
+
+            let text = "Are you sure you want to submit your order?";
+            if (confirm(text) == true) {
+
+              alert("Your order was successfully submitted"); window.location.href = "index.html";
+            }
+            else {
+              window.location.href = "order_taco.html";
+            }
+          }
+        </script>
+
+      </div>
+  </form>
+</main>
+
+</html>

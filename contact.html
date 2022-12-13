@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="photos/favicon-32x32.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+  <title>Contact Form</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header>
+    <span><a href="index.html">
+        <img alt="Sandwich" src="photos/sandwich-icon.png">
+      </a></span>
+<br>
+<div class ="googlecontainer">
+        <div id="google_translate_element"></div>
+        <script>
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+              {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+              'google_translate_element'
+            );
+          }
+        </script>
+
+        <script 
+          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+</div>
+     <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
+    <script src=theme.js></script>
+    
+    <nav>
+      <ul class="nav-list">
+        <li><a href="order.html">Order</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form>
+      <div class="container">
+        <h1>Contact Us</h1>
+
+        <label for="fname">First Name</label>
+        <input required type="text" id="fname" name="firstname" placeholder="Your name..">
+        <br>
+
+        <label for="lname">Last Name</label>
+        <input required type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <br>
+
+        <label for="email">Email</label>
+        <input required type="text" id="email" pattern=".+@hotmail\.com" name="e-mail" placeholder="...@hotmail.com">
+        <br>
+        <label for="subject">Subject</label>
+        <br>
+        <textarea id="subject" name="subject" placeholder="Write something.." rows="3" cols="50"> </textarea>
+        <br>
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+    <script src="form.js"></script>
+   
+  </main>
+
+  <footer>
+    Copyright the Fungis 2022
+  </footer>
+</body>
+
+</html>

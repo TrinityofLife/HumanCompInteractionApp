@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="photos/favicon-32x32.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Login</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header>
+    <span><a href="index.html">
+        <img alt="Sandwich" src="photos/sandwich-icon.png">
+      </a></span>
+    <br>
+<div class ="googlecontainer">
+        <div id="google_translate_element"></div>
+        <script>
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+              {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+              'google_translate_element'
+            );
+          }
+        </script>
+
+        <script 
+          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+</div>
+     <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
+    <script src=theme.js></script>
+    
+    <nav>
+      <ul class="nav-list">
+        <li><a href="order.html">Order</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Login</h1>
+
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="enter username" required>
+        <br>
+
+        <label for="password">Password</label>
+        <input type="text" id="password" name="password" placeholder="xxxxxx" required>
+        <br>
+        <br>
+        <button type="submit"> Login </button>
+      </form>
+
+      <p>When you are finished, click the "Submit" button to confirm your username and password.</p>
+      <p>If you do not have an accout, please make one here: <a href="create_account.html">Create Account</a></p>
+      </div>
+  </main>
+
+
+
+  <script>
+    const loginForm = document.querySelector("form")
+
+    function confirmLogin(event) {
+      console.log("confirmlogin")
+      event.preventDefault()
+
+      let text = "Are you sure you want to login with this account?";
+
+      if (confirm(text) == true) {
+        alert("You have successfully logged in!"); window.location.href = "index.html";
+      }
+      else {
+        window.location.href = "login.html";
+      }
+    }
+
+    loginForm.addEventListener("submit", confirmLogin);
+  </script>
+  
+  <footer>
+  Copyright the Fungis 2022
+</footer>
+  
+</body>
+</html>
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="photos/favicon-32x32.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Order Home Page</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<main>
+  <header>
+    <span><a href="index.html">
+        <img alt="Sandwich" src="photos/sandwich-icon.png">
+      </a></span>
+<br>
+<div class ="googlecontainer">
+        <div id="google_translate_element"></div>
+        <script>
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+              {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+              'google_translate_element'
+            );
+          }
+        </script>
+
+        <script 
+          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+</div>
+    <label id="switch" class="switch">
+      <input type="checkbox" onchange="toggleTheme()" id="slider">
+      <span class="slider round"></span>
+    </label>
+    <script src=theme.js></script>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a href="order.html">Order</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+
+  </header>
+
+  <div class="container">
+    <h2>
+      Order food here:
+    </h2>
+    <div class="formcontainer">
+      <p class="paragraph"><span style="--delay: 0s;"><a href="order_sandwich.html">Sandwich</a></span></p>
+      <p class="paragraph"><span style="--delay: .25s"><a href="order_hotdog.html">Hot Dog</a></span></p>
+      <p class="paragraph"><span style="--delay: .5s"><a href="order_taco.html">Taco</a></span></p>  
+    </div>
+    <br>
+  </div>
+  <br>
+
+</main>
+
+<footer>
+  Copyright the Fungis 2022
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="photos/favicon-32x32.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>About Us</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <header>
+    <span><a href="index.html">
+        <img alt="Sandwich" src="photos/sandwich-icon.png">
+      </a></span>
+    <br>
+<div class ="googlecontainer">
+        <div id="google_translate_element"></div>
+        <script>
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+              {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+              'google_translate_element'
+            );
+          }
+        </script>
+
+        <script 
+          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+</div>
+    
+     <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
+    <script src=theme.js></script>
+    
+    <nav>
+      <ul class="nav-list">
+        <li><a href="order.html">Order</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>About Us</h1>
+      
+      <article>
+        <h2>FAQ (Click on your question!)</h2>
+        <details>
+          <summary>
+            How do I order a sandwich?
+          </summary>
+          <p>You can fill out any of our forms available on the home page!</p>
+        </details>
+        <details>
+          <summary>
+            Where do you get your ingredients?
+          </summary>
+          <p> We work with local farmers to acquire the freshest ingredients for the tastiest sandwiches.</p>
+        </details>
+        <details>
+          <summary>
+            What are your companies values?
+          </summary>
+          <p>
+            We value friendship, fun and sandwiches. We will make a sandwich out of anything and everything, for anyone,
+            anytime.
+          </p>
+        </details>
+      </article>
+
+      <h2>Our Mission</h2>
+      <p>To make a sandwich out of anything and everything, for anyone, anytime. </p>
+      <h2>Our Members</h2>
+      <p>Sage Smith</p>
+      <p>Dylan Mauch</p>
+      <p>Kyle Kassi</p>
+      <p>Alex Kotouch</p>
+    </div>
+  </main>
+
+  <footer>
+    Copyright the Fungis 2022
+  </footer>
+</body>
+
+</html>

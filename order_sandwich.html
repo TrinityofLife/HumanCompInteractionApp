@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="photos/favicon-32x32.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sandwich Order Form</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<main>
+  <header>
+    <span><a href="index.html">
+        <img alt="Sandwich" src="photos/sandwich-icon.png">
+      </a></span>
+<br>
+<div class ="googlecontainer">
+        <div id="google_translate_element"></div>
+        <script>
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+              {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+              'google_translate_element'
+            );
+          }
+        </script>
+
+        <script 
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+</div>
+     <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
+    <script src=theme.js></script>
+    
+    <nav>
+      <ul class="nav-list">
+        <li><a href="order.html">Order</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+    <br>
+
+    <div class="container">
+      <div class="formcontainer">
+
+        <label for="Bread"> Bread</label>
+        <Select name="Bread-Type">
+          <Option value="Italian">Italian</Option>
+          <Option value="White">White</Option>
+          <Option value="Wheat">Wheat</Option>
+          <Option value="Flatbread">Flatbread</Option>
+          <Option value="No-Bread">No Bread</Option>
+        </Select>
+
+      </div>
+      <br>
+
+      <div class="image">
+        <img src="photos/DeliMeat.jpg" class="foodImages" alt="Deli Meat">
+      </div>
+      <div class="formcontainer">
+        <p> Meat: (Choose any number of options.)</p>
+        <input type="checkbox" id="meat" name="Ham" value="Ham"> <label for="Ham"> Ham </label><br>
+
+        <input type="checkbox" id="meat" name="turkey" value="turkey"> <label for="turkey"> Turkey </label><br>
+
+        <input type="checkbox" id="meat" name="pepperoni" value="pepperoni"> <label for="pepperoni"> Pepperoni
+        </label><br>
+        <input type="checkbox" id="meat" name="Salami" value="Salami"> <label for="Salami"> Salami </label><br>
+        <input type="checkbox" id="meat" name="Bacon" value="Bacon"> <label for="Bacon"> Bacon </label><br>
+        <input type="checkbox" id="meat" name="Vegan" value="Vegan"> <label for="Vegan"> Vegan </label><br>
+      </div>
+
+      <br>
+      <div class="image">
+        <img src="photos/american-deli-cheese.jpg" class="foodImages" alt="American Cheese">
+      </div>
+      <div class="formcontainer">
+        <p>Cheese: (Choose any number of options.)</p>
+
+        <input type="checkbox" id="cheese" name="Cheddar" value="Cheddar"> <label for="Cheddar"> Cheddar
+        </label><br>
+
+        <input type="checkbox" id="Cheese" name="Swiss" value="Swiss"> <label for="Swiss"> Swiss </label><br>
+
+        <input type="checkbox" id="Cheese" name="Provolone" value="Provolone"> <label for="Provolone">
+          Provolone
+        </label><br>
+
+        <input type="checkbox" id="Cheese" name="Pepperjack" value="Pepperjack"> <label for="Pepperjack">
+          Pepperjack
+        </label><br>
+
+        <input type="checkbox" id="Cheese" name="Mozzarella" value="Mozzarella"> <label for="Mozzarella">
+          Mozzarella
+        </label><br>
+
+        <input type="checkbox" id="Cheese" name="VeganCheese" value="VeganCheese"> <label for="VeganCheese">
+          Vegan
+          Cheese </label><br>
+
+        <input type="checkbox" id="Cheese" name="NoCheese" value="NoCheese"> <label for="NoCheese"> No
+          Cheese
+        </label><br>
+      </div>
+
+      <br>
+
+
+      <div>
+        <label for="Special">Special Request</label>
+        <textarea name="Special"></textarea>
+      </div>
+
+      <fieldset>
+        <legend>Hot or Cold</legend>
+        
+        <div>
+          <label for="Cold">Cold</label>
+          <input checked name="Temp" id="Cold" type="radio" value="Cold" />
+        </div>
+        <div>
+          <label for="Hot">Hot</label>
+          <input name="Temp" id="Hot" type="radio" value="Hot" />
+        </div>
+      
+      </fieldset>
+      <br>
+      <button onclick="ConfirmOrder()" value="Submit"> Click here when finished!</button>
+
+      <script>
+        function
+      ConfirmOrder() { 
+        let text = "Are you sure you want to submit your order?";
+          if (confirm(text) == true) {
+
+            alert("Your order was successfully submitted"); window.location.href = "index.html";
+          }
+          else {
+            window.location.href = "order.html";
+          }
+        }
+      
+      </script>
+
+    </div>
+  </form>
+
+
+
+</main>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="photos/favicon-32x32.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create an Account</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header>
+    <span><a href="index.html">
+        <img alt="Sandwich" src="photos/sandwich-icon.png">
+      </a></span>
+    <br>
+<div class ="googlecontainer">
+        <div id="google_translate_element"></div>
+        <script>
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+              {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+              'google_translate_element'
+            );
+          }
+        </script>
+
+        <script 
+          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+</div>
+     <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
+    <script src=theme.js></script>
+    
+    <nav>
+      <ul class="nav-list">
+        <li><a href="order.html">Order</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Create an Account</h1>
+      <p>
+        This is where you can create an account if you do not have one.
+      </p>
+      S
+      <p><label for="Name">Please enter your name:</label></p>
+      <input required type="text" id="Name" name="name" placeholder="xxxxxx">
+      <br>
+
+      <p><label for="Address">Please enter your address:</label></p>
+      <input required type="text" id="Address" name="address" placeholder="xxxxxx">
+      <br>
+
+      <p><label for="NewUsername">Please enter a username:</label></p>
+      <input required type="text" id="NewUsername" name="newusername" placeholder="xxxxxx">
+      <br>
+
+      <p><label for="NewPassword">Please enter a password:</label></p>
+      <input required type="text" id="NewPassword" name="newpassword" placeholder="xxxxxx">
+      <br>
+
+      <p><label for="ConfirmPassword">Please confirm your password:</label></p>
+      <input required type="text" id="ConfirmPassword" name="confirmpassword" placeholder="xxxxxx">
+      <br>
+      <br>
+      <button type="Submit">Submit</button>
+      <p>When you are finished, click the "Submit" button to confirm your information.</p>
+
+
+    </div>
+  </main>
+
+  <footer>
+    Copyright the Fungis 2022
+  </footer>
+</body>
+
+</html>

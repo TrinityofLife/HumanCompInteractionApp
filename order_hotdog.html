@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="photos/favicon-32x32.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Hot Dog Order Form</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<main>
+  <header>
+    <span><a href="index.html">
+        <img alt="Sandwich" src="photos/sandwich-icon.png">
+      </a></span>
+    <br>
+<div class ="googlecontainer">
+        <div id="google_translate_element"></div>
+        <script>
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+              {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+              'google_translate_element'
+            );
+          }
+        </script>
+
+        <script 
+          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+</div>
+     <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
+    <script src=theme.js></script>
+    
+    <nav>
+      <ul class="nav-list">
+        <li><a href="order.html">Order</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+
+
+    <br>
+    <div class="container">
+      <div class="formcontainer">
+        <label for="Bun"> Bun</label>
+        <Select name="Bun-Type">
+          <Option value="White">White</Option>
+          <Option value="potato_bun">Potato Bun</Option>
+          <Option value="Wheat">Wheat</Option>
+          <Option value="pretzel_roll">Pretzel Roll</Option>
+          <Option value="No_Bun">No Bun</Option>
+        </Select>
+      </div>
+
+      <br>
+
+      <div class="formcontainer">
+        <label for="meat"> Meat:</label>
+        <Select name="Meat-Type">
+          <Option value="beef">Beef</Option>
+          <Option value="sausage">Sausage</Option>
+          <Option value="bratwurst">Bratwurst</Option>
+          <Option value="vegan">Vegan</Option>
+          <Option value="No_Meat">No Meat</Option>
+        </Select>
+      </div>
+
+      <br>
+
+      <div class="image">
+        <img src="photos/Cheese-Hotdog2.jpg" class="foodImages" alt="Cheese Hotdog">
+      </div>
+      <div class="formcontainer">
+        <p>Cheese: (Choose any number of options.)</p>
+        <input type="checkbox"  name="Cheddar"> <label for="Cheddar"> Cheddar
+        </label><br>
+
+        <input type="checkbox" name="Swiss"> <label for="Swiss"> Swiss </label><br>
+
+        <input type="checkbox" name="Provolone"> <label for="Provolone">
+          Provolone
+        </label><br>
+
+        <input type="checkbox" name="Pepperjack"> <label for="Pepperjack">
+          Pepperjack
+        </label><br>
+
+        <input type="checkbox" name="Mozzarella"> <label for="Mozzarella">
+          Mozzarella
+        </label><br>
+      </div>
+
+      <br>
+
+      <div class="image">
+        <img src="photos/Toppings-Hotdog.jpg" class="foodImages" alt="Toppings">
+      </div>
+      <div class="formcontainer">
+        <p>Extras (Optional):</p>
+        <input type="checkbox" id="topping" name="colesaw" value="colesaw"> <label for="colesaw"> Colesaw </label><br>
+        <input type="checkbox" id="topping" name="relish" value="relish"> <label for="relish"> Relish </label><br>
+        <input type="checkbox" id="topping" name="ketchup" value="ketchup"> <label for="ketchup"> Ketchup </label><br>
+        <input type="checkbox" id="topping" name="mustard" value="mustard"> <label for="mustard"> Mustard </label><br>
+        <input type="checkbox" id="topping" name="chili" value="chili"> <label for="chili"> Chili </label><br>
+        <input type="checkbox" id="topping" name="bacon" value="bacon"> <label for="bacon"> Bacon </label><br>
+      </div>
+
+      <br>
+
+      <div>
+
+        <label for="Special">Special Request</label>
+        <textarea name="Special"></textarea>
+      </div>
+      <br>
+      <button onclick="ConfirmOrder()" value="Submit"> Click here when finished!</button>
+
+      <script>
+        function ConfirmOrder() {
+          let text = "Are you sure you want to submit your order?";
+          if (confirm(text) == true) {
+
+            alert("Your order was successfully submitted"); window.location.href = "index.html";
+          }
+          else {
+            window.location.href = "order_hotdog.html";
+          }
+        }
+      </script>
+
+    </div>
+  </form>
+</main>
+
+</html>
